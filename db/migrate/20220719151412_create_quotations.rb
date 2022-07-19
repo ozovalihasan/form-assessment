@@ -1,11 +1,12 @@
-class CreateQuotes < ActiveRecord::Migration[7.0]
+class CreateQuotations < ActiveRecord::Migration[7.0]
   def change
-    create_table :quotes do |t|
+    create_table :quotations do |t|
       t.string :first_name
       t.string :last_name
       t.string :email
       t.string :phone
-      t.string :municipal
+      t.integer :municipal_evaluation
+      t.string :address
       t.string :postal_code
       t.string :city
       t.string :province

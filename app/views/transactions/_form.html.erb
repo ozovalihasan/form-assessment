@@ -1,0 +1,113 @@
+<%= form_with(model: transaction) do |form| %>
+  <% if transaction.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+
+      <ul>
+        <% transaction.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div>
+    <%= form.label :language, style: "display: block" %>
+    <%= form.text_field :language %>
+  </div>
+ 
+  <div>
+    <%= form.label :first_homeowner, style: "display: block" %>
+    <%= form.text_field :first_homeowner, value: quotation.first_name + " " + quotation.last_name  %>
+  </div>
+ 
+  <div>
+    <%= form.label :second_homeowner, style: "display: block" %>
+    <%= form.text_field :second_homeowner %>
+  </div>
+ 
+  <div>
+    <%= form.label :third_homeowner, style: "display: block" %>
+    <%= form.text_field :third_homeowner %>
+  </div>
+ 
+  <div>
+    <%= form.label :type_property, style: "display: block" %>
+    <%= form.text_field :type_property %>
+  </div>
+ 
+  <div>
+    <%= form.label :owner, style: "display: block" %>
+    <%= form.text_field :owner %>
+  </div>
+ 
+  <div>
+    <%= form.label :purchase_date, style: "display: block" %>
+    <%= form.text_field :purchase_date %>
+  </div>
+ 
+  <div>
+    <%= form.label :property_value, style: "display: block" %>
+    <%= form.text_field :property_value, value: quotation.municipal_evaluation %>
+  </div>
+ 
+  <div>
+    <%= form.label :lot_number, style: "display: block" %>
+    <%= form.text_field :lot_number %>
+  </div>
+ 
+  <div>
+    <%= form.label :adress, style: "display: block" %>
+    <%= form.text_field :adress, quotation.address %>
+  </div>
+ 
+  <div>
+    <%= form.label :city, style: "display: block" %>
+    <%= form.text_field :city, quotation.city %>
+  </div>
+ 
+  <div>
+    <%= form.label :postal_code, style: "display: block" %>
+    <%= form.text_field :postal_code, quotation.postal_code %>
+  </div>
+ 
+  <div>
+    <%= form.label :bound_water, style: "display: block" %>
+    <%= form.text_field :bound_water %>
+  </div>
+ 
+  <div>
+    <%= form.label :municipial_sewer, style: "display: block" %>
+    <%= form.text_field :municipial_sewer %>
+  </div>
+ 
+  <div>
+    <%= form.label :issued, style: "display: block" %>
+    <%= form.text_field :issued %>
+  </div>
+ 
+  <div>
+    <%= form.label :denied, style: "display: block" %>
+    <%= form.text_field :denied %>
+  </div>
+ 
+  <div>
+    <%= form.label :note, style: "display: block" %>
+    <%= form.text_field :note %>
+  </div>
+ 
+  <div>
+    <%= form.label :agent_name, style: "display: block" %>
+    <%= form.text_field :agent_name %>
+  </div>
+ 
+  <div>
+    <%= form.label :agent_email, style: "display: block" %>
+    <%= form.text_field :agent_email %>
+  </div>
+ 
+  <div>
+    <%= form.submit "Request a Callback" %>
+  </div>
+<% end %>

@@ -10,19 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_19_144630) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_19_154947) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "quotes", force: :cascade do |t|
+  create_table "quotations", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
     t.string "email"
     t.string "phone"
-    t.string "municipal"
+    t.integer "municipal_evaluation"
+    t.string "address"
     t.string "postal_code"
     t.string "city"
     t.string "province"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "transactions", force: :cascade do |t|
+    t.string "language"
+    t.string "first_homeowner"
+    t.string "second_homeowner"
+    t.string "third_homeowner"
+    t.string "type_property"
+    t.boolean "owner"
+    t.string "purchase_date"
+    t.integer "property_value"
+    t.string "lot_number"
+    t.string "adress"
+    t.string "city"
+    t.string "postal_code"
+    t.boolean "bound_water"
+    t.boolean "municipial_sewer"
+    t.boolean "issued"
+    t.boolean "denied"
+    t.text "note"
+    t.string "agent_name"
+    t.string "agent_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

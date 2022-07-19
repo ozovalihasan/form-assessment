@@ -11,6 +11,7 @@
   </head>
 
   <body>
+    <%= render partial: "layouts/notice", locals: { notice: flash.notice} %>
     <%= yield %>
   </body>
 </html>
