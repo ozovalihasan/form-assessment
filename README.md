@@ -1,24 +1,13 @@
-# README
+This project is an assessment of a client.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Run locally
 
-Things you may want to cover:
+Install ruby v3.1.2.
+Then, please run the next commands one by one in the given order;
+    `bundle install`
+    `bin/rails db:create db:migrate`
+    `bin/rails server`
 
-* Ruby version
+# Test 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Any test is not added.
