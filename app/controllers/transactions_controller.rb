@@ -17,7 +17,7 @@ class TransactionsController < ApplicationController
   private
 
     def transaction_params
-      params.require(:transaction).permit(:language, :first_homeowner, :second_homeowner, :third_homeowner, :type_property, :owner, :purchase_date, :property_value, :lot_number, :adress, :city, :postal_code, :bound_water, :municipial_sewer, :issued, :denied, :note, :agent_name, :agent_email )
+      params.require(:transaction).permit(:price, :language, :first_homeowner, :second_homeowner, :third_homeowner, :type_property, :owner, :purchase_date, :property_value, :lot_number, :adress, :city, :postal_code, :bound_water, :municipial_sewer, :issued, :denied, :note, :agent_name, :agent_email )
     end
 end
 

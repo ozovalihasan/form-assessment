@@ -12,6 +12,8 @@
   <% end %>
 
 
+  <%= form.hidden_field :price, value: calculate_quotation(quotation.municipal_evaluation)  %>
+
   <div>
     <%= form.label :language, style: "display: block" %>
     <%= form.text_field :language %>
