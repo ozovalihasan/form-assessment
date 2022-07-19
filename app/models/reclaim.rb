@@ -1,0 +1,2 @@
+class Reclaim < ApplicationRecord
+end

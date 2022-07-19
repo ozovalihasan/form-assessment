@@ -59,17 +59,17 @@
  
   <div>
     <%= form.label :adress, style: "display: block" %>
-    <%= form.text_field :adress, quotation.address %>
+    <%= form.text_field :adress, value: quotation.address %>
   </div>
  
   <div>
     <%= form.label :city, style: "display: block" %>
-    <%= form.text_field :city, quotation.city %>
+    <%= form.text_field :city, value: quotation.city %>
   </div>
  
   <div>
     <%= form.label :postal_code, style: "display: block" %>
-    <%= form.text_field :postal_code, quotation.postal_code %>
+    <%= form.text_field :postal_code, value: quotation.postal_code %>
   </div>
  
   <div>
@@ -111,3 +111,5 @@
     <%= form.submit "Request a Callback" %>
   </div>
 <% end %>
+
+<div id="new_reclaim"></div>
