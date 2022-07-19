@@ -16,7 +16,7 @@
 
   <div>
     <%= form.label :language, style: "display: block" %>
-    <%= form.text_field :language %>
+    <%= form.select :language, options_for_select([["French", "Fr"], ["English", "Eng"]]) %>
   </div>
  
   <div>
@@ -41,7 +41,7 @@
  
   <div>
     <%= form.label :owner, style: "display: block" %>
-    <%= form.text_field :owner %>
+    <%= form.select :owner, options_for_select([false, true]) %>
   </div>
  
   <div>
@@ -76,22 +76,23 @@
  
   <div>
     <%= form.label :bound_water, style: "display: block" %>
-    <%= form.text_field :bound_water %>
+    <%= form.select :bound_water, options_for_select([false, true]) %>
+
   </div>
  
   <div>
     <%= form.label :municipial_sewer, style: "display: block" %>
-    <%= form.text_field :municipial_sewer %>
+    <%= form.select :municipial_sewer, options_for_select([false, true]) %>
   </div>
  
   <div>
     <%= form.label :issued, style: "display: block" %>
-    <%= form.text_field :issued %>
+    <%= form.select :issued, options_for_select([false, true]) %>
   </div>
  
   <div>
     <%= form.label :denied, style: "display: block" %>
-    <%= form.text_field :denied %>
+    <%= form.select :denied, options_for_select([false, true]) %>
   </div>
  
   <div>
