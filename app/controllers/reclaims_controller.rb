@@ -8,7 +8,7 @@ class ReclaimsController < ApplicationController
 
     respond_to do |format|
       if @reclaim.save
-        format.html { redirect_to new_quotation_url, notice: "Reclaim was successfully created." }
+        format.html { redirect_to new_quotation_url, notice: "Reclaim was successfully created. We will call you back as soon as possible." }
       end
     end
   end
